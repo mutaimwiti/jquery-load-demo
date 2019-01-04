@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link href="assets/index.css" rel="stylesheet" type="text/css">
+  <title>Super cars</title>
+</head>
+<body>
+<div>
+  <div>
+    <ul class="menu">
+      <li class="menu-item"><a href="#">Lamborghini</a></li>
+      <li class="menu-item"><a href="#">Ferrari</a></li>
+      <li class="menu-item"><a href="#">Pagani</a></li>
+    </ul>
+  </div>
+  <h4 class="auto-title"></h4>
+  <div class="auto-description"></div>
+</div>
+<script>
+  $('.menu-item:not(.general)>a').click(function () {
+    // get vehicle make name
+    const name = $(this)[0].text;
+    $('.auto-title').html(name);
+    // construct the file of the html file to load e.g. "makes/ferrari.html"
+    const makeContentFileName = 'makes/' + name.toLowerCase() + '.html';
+    // load the description of the make into the page
+    $('.auto-description').load(makeContentFileName);
+  });
+</script>
+</body>
+</html>
