@@ -6,4 +6,6 @@ ajax request.
 This helps makes it possible to break down the contents of a page into manageable units and load them dynamically on 
 demand.
 
+View the page here https://mutaimwiti.github.io/jquery-load-demo/.
+
 *Disclaimer: The descriptions of Ferrari, Lamborghini and Pagani are borrowed from Wikipedia.*
